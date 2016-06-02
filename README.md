@@ -5,7 +5,7 @@
 
 ## Overview
 
-Api rest services with mongodb.
+Api rest services with mongodb. To test it you can use chrome extension [Rest console](https://splash.riverbed.com/thread/4889).
 
 ## Install dependencies
 
