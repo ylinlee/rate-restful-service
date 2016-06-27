@@ -2,6 +2,15 @@ var mongoose = require('mongoose');
 var Review  = mongoose.model('Review');
 
 //GET - Return all reviews in the DB
+exports.findAllReviews = function(req, res) {
+    console.log('GET: findAllReviews');
+    Review.find(function(err, reviews) {
+        if(err) res.send(500, err.message);
+
+        console.log('GET /reviews');
+        res.status(200).jsonp(reviews);
+    });
+};
 exports.findByPerson = function(req, res) {
     console.log('GET: findByPerson');
     Review.find({ personId: req.params.id }, function(err, reviews) {

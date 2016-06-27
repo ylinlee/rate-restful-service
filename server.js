@@ -14,7 +14,7 @@ app.use(methodOverride());
 app.use('/*', function (req, res, next) {
 
     // Website you wish to allow to connect
-    res.header('Access-Control-Allow-Origin', process.env.HOST || 'http://localhost:3000');
+    res.header('Access-Control-Allow-Origin', process.env.HOST || 'http://localhost:3010');
 
     // Request methods you wish to allow
     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');

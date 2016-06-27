@@ -4,6 +4,9 @@ var express = require('express'),
 // API routes
 var reviewRoute = express.Router();
 
+reviewRoute.route('/reviews')
+  .get(reviewCtrl.findAllReviews);
+  
 reviewRoute.route('/reviews/:id')
   .get(reviewCtrl.findByPerson);
 
