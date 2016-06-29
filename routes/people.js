@@ -1,5 +1,4 @@
 var express = require('express'),
-  personModel = require('../model/person'),
   personCtrl = require('../controllers/person');
 // API routes
 var personRoute = express.Router();

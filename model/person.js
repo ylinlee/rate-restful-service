@@ -1,12 +1,23 @@
-var mongoose = require('mongoose'),
-    Schema   = mongoose.Schema;
-
-
-var personSchema = new Schema({
-  nick:       { type: String },
-  job:        { type: String },
-  profileImg: { type: String },
-  background: { type: String }
-});
-
-module.exports = mongoose.model('Person', personSchema);
+module.exports = function(sequelize, DataTypes){
+  return sequelize.define(
+    'Person',
+    {
+      nick: {
+        type: DataTypes.STRING,
+        validate: { notEmpty: {msg: "-> Falta Nombre"} }
+      },
+      job: {
+        type: DataTypes.TEXT,
+        validate: { notEmpty: {msg: "-> Falta descripcion"} }
+      },
+      profileImg: {
+        type: DataTypes.TEXT,
+        validate: { notEmpty: {msg: "-> Falta imagen de perfil"} }
+      },
+      background: {
+        type: DataTypes.TEXT,
+        validate: { notEmpty: {msg: "-> Falta imagen de fondo"} }
+      }
+    }
+  );
+}

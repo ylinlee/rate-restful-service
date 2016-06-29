@@ -1,9 +1,11 @@
 var express = require('express'),
-  reviewModel = require('../model/review'),
   reviewCtrl = require('../controllers/review');
 // API routes
 var reviewRoute = express.Router();
 
+reviewRoute.route('/reviews')
+  .get(reviewCtrl.findAllReviews);
+  
 reviewRoute.route('/reviews/:id')
   .get(reviewCtrl.findByPerson);
 
