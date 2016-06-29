@@ -5,7 +5,7 @@
 
 ## Overview
 
-Api rest services with mongodb. To test it you can use chrome extension [Rest console](https://splash.riverbed.com/thread/4889).
+Api rest services with postgres on production. On develop use sqlite3. To test it you can use chrome extension [Rest console](https://splash.riverbed.com/thread/4889).
 
 ## Install dependencies
 
@@ -13,19 +13,8 @@ Api rest services with mongodb. To test it you can use chrome extension [Rest co
 ```
 npm install
 ```
-Run API REST server on port 3001
+Run API REST server on port 8080
 ```
 node server
 
 ```
-## MongoDB
-
-Execute mongo db
-
-```
-mongod.exe --dbpath C:\ylin\mystuff\mongodb\data
-
-```
-mongod.exe: where you has installed.
-
---dbpath: path of your database
